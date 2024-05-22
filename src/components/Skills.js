@@ -34,24 +34,24 @@ export const Skills = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="skill-bx wow zoomIn">
-                            <h2>Skills</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <h2>Habilidades</h2>
+                            <p> Al conocer cómo aprendes mejor, puedes potenciar tus talentos y habilidades. Adapta tus métodos de estudio a tu estilo y observa cómo creces en confianza y competencia. ¡Explora tus habilidades y alcanza tu máximo potencial con el aprendizaje personalizado!.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <h5>Auditivo</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image" />
-                                    <h5>Brand Identity</h5>
+                                    <h5>Kinestesico</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter3} alt="Image" />
-                                    <h5>Logo Design</h5>
+                                    <h5>Visual</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <h5>Divergente</h5>
                                 </div>
                             </Carousel>
                         </div>

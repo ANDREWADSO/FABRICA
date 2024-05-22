@@ -59,7 +59,7 @@ export const Banner = () => {
                       <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                         <span className="tagline">¡Bienvenido a Aprendix!</span>
                         <h1>{`Navegaremos`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p>Aprender es un viaje que se vuelve más efectivo cuando comprendes tu estilo único. El test VAK, que clasifica a los estudiantes como visuales, auditivos o kinestésicos, puede ayudarte a identificar tus fortalezas y adaptar tus métodos de estudio. Abraza tu estilo y mejora tu experiencia de aprendizaje.</p>
                         <button onClick={() => console.log('connect')}> Conectate <ArrowRightCircle size={25} /></button>
                       </div>}
                       </TrackVisibility>
