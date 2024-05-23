@@ -4,8 +4,11 @@ import meter1 from '../assets/img/meter1.svg';
 import meter2 from '../assets/img/meter2.svg';
 import meter3 from '../assets/img/meter3.svg';
 import colorSharp from '../assets/img/color-sharp.png';
-
-
+import Lottie from 'lottie-react';
+import visual from '../assets/img/visual.json';
+import auditivo from '../assets/img/auditivo.json';
+import lector from '../assets/img/lector.json';
+import kinestesico from '../assets/img/kinestesico.json'
 
 export const Skills = () => {
     const responsive = {
@@ -38,20 +41,20 @@ export const Skills = () => {
                             <p> Al conocer cómo aprendes mejor, puedes potenciar tus talentos y habilidades. Adapta tus métodos de estudio a tu estilo y observa cómo creces en confianza y competencia. ¡Explora tus habilidades y alcanza tu máximo potencial con el aprendizaje personalizado!.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                <Lottie animationData={auditivo} loop={true} style={{ height: 200, width: 200 }} />
                                     <h5>Auditivo</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
-                                    <h5>Kinestesico</h5>
+                                <Lottie animationData={kinestesico} loop={true} style={{ height: 200, width: 200 }} />
+                                    <h5>Kinestésico</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                <Lottie animationData={visual} loop={true} style={{ height: 200, width: 200 }} />
                                     <h5>Visual</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Divergente</h5>
+                                <Lottie animationData={lector} loop={true} style={{ height: 200, width: 200 }} />
+                                    <h5>Lector</h5>
                                 </div>
                             </Carousel>
                         </div>
@@ -62,3 +65,5 @@ export const Skills = () => {
         </section>
       )
     }
+
+export default Skills;
