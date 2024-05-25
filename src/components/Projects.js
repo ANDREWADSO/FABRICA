@@ -53,8 +53,8 @@ export const Projects = () => {
               <TrackVisibility>
                 {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                  <h2>Projects</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <h2>Proyecto</h2>
+                  <p>Para facilitar la comprensión y aplicación del test VAK, se han desarrollado una serie de videos didácticos que guían a los usuarios en el proceso de identificación de su estilo de aprendizaje. Estos videos no solo explican detalladamente los conceptos detrás del modelo VAK, sino que también ofrecen ejercicios prácticos y ejemplos reales para ayudar a los individuos a reconocer sus preferencias.</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>

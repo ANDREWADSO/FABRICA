@@ -1,4 +1,3 @@
-
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import logo from '../assets/img/logo.svg';
@@ -6,7 +5,6 @@ import { useNavigate, NavLink } from "react-router-dom"; //importamos el useHist
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
-
 
 
 export const CustomNavbar = () => {
@@ -40,7 +38,6 @@ export const CustomNavbar = () => {
   }
 
 
-
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -54,7 +51,7 @@ export const CustomNavbar = () => {
           <Nav className="me-auto">
             <Nav.Link onClick={() => { onUpdateActiveLink('home'); handleScroll('home'); }} className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}>Home</Nav.Link>
             <Nav.Link onClick={() => { onUpdateActiveLink('skills'); handleScroll('skills'); }} className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}>Habilidades</Nav.Link>
-            <Nav.Link onClick={() => { onUpdateActiveLink('proyecto'); handleScroll('proyecto'); }} className={activeLink === 'proyecto' ? 'active navbar-link' : 'navbar-link'}>Proyecto</Nav.Link>
+            <Nav.Link onClick={() => { onUpdateActiveLink('projects'); handleScroll('projects'); }} className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}>Proyecto</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
