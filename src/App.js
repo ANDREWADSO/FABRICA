@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 // import {NavBar} from './components/NavBar'; *****CHEQUEAR RUTA DEL NAVBAR****
@@ -11,6 +11,9 @@ import { Footer } from './components/Footer';
 import { Login } from './components/Login';
 import { Register } from './components/Register'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const LoginForm = (props) => {
   const [currentForm, setCurrentForm] = useState('login');
@@ -42,6 +45,7 @@ const Home = () => (
   </div>
 );
 
+
 function App() {
   return (
     <Router>
@@ -52,6 +56,7 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
 // {/* <div className="App">
