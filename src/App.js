@@ -29,9 +29,15 @@ const LoginForm = (props) => {
 const Home = () => (
   <div>
     <CustomNavbar />
-    <Banner />
-    <Skills />
-    <Projects />
+    <section id="home" style={{ padding: '100px 0', height: '100vh' }}>
+      <Banner />
+    </section>
+    <section id="skills" style={{ padding: '100px 0', height: '100vh' }}>
+      <Skills />
+    </section>
+    <section id="proyecto" style={{ padding: '100px 0', height: '100vh' }}>
+      <Projects />
+    </section>
     <Footer />
   </div>
 );

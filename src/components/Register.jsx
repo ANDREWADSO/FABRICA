@@ -5,10 +5,13 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+    const [role, setRole] = useState('');
     const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        console.log("Datos enviados:", { name, email, password, role });
 
         try {
             const response = await fetch('https://backend-final1.onrender.com/api-auth/register/', {
@@ -17,16 +20,20 @@ export const Register = (props) => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
+                    name: name,
                     email: email,
                     password: password,
-                    name: name
+                    role: role
                 }),
             });
 
-            // Verifica si la respuesta no es JSON
+            console.log("Estado de la respuesta:", response.status);
+            console.log("Encabezados de la respuesta:", response.headers);
+
             if (response.headers.get('content-type')?.includes('application/json')) {
                 const data = await response.json();
                 if (!response.ok) {
+                    console.log("Datos de error:", data);
                     throw new Error(data.message || 'Error en el registro');
                 }
 
@@ -34,6 +41,7 @@ export const Register = (props) => {
                 setMessage('¡Registro exitoso! Ahora puedes iniciar sesión.');
             } else {
                 const text = await response.text();
+                console.log("Texto de error inesperado:", text);
                 throw new Error(`Error inesperado: ${text}`);
             }
         } catch (error) {
@@ -73,6 +81,16 @@ export const Register = (props) => {
                     placeholder="********" 
                     id="password" 
                     name="password" 
+                    required
+                />
+                <label htmlFor="role">Rol</label>
+                <input 
+                    value={role} 
+                    onChange={(e) => setRole(e.target.value)} 
+                    type="text" 
+                    placeholder="Ingresa tu rol" 
+                    id="role" 
+                    name="role" 
                     required
                 />
                 <button type="submit">Registrar</button>

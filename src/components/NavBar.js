@@ -32,10 +32,19 @@ export const CustomNavbar = () => {
       setActiveLink(value);
   }
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
+       <Navbar.Brand href="#home" onClick={() => handleScroll('home')}>
           <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -43,9 +52,9 @@ export const CustomNavbar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/habilidades" className={activeLink === 'habilidades' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('habilidades')}>Habilidades</Nav.Link>
-            <Nav.Link as={NavLink} to="/proyecto" className={activeLink === 'proyecto' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('proyecto')}>Proyecto</Nav.Link>
+            <Nav.Link onClick={() => { onUpdateActiveLink('home'); handleScroll('home'); }} className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}>Home</Nav.Link>
+            <Nav.Link onClick={() => { onUpdateActiveLink('skills'); handleScroll('skills'); }} className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}>Habilidades</Nav.Link>
+            <Nav.Link onClick={() => { onUpdateActiveLink('proyecto'); handleScroll('proyecto'); }} className={activeLink === 'proyecto' ? 'active navbar-link' : 'navbar-link'}>Proyecto</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">

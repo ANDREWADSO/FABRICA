@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Importa el componente Link de React Router
 import bannerImg from "../assets/img/banner-bg.png";
+import Lottie from "lottie-react";
+import space1 from '../assets/img/space1.json'
+
+
 
 export const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -16,11 +20,16 @@ export const Login = (props) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+
+                
+
                 body: JSON.stringify({
                     email: email,
                     password: password
                 }),
             });
+
+            
 
             const data = await response.json();
             if (!response.ok) {
@@ -65,7 +74,10 @@ export const Login = (props) => {
             <p>{message}</p>
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>¿No tienes una cuenta? Regístrate aquí.</button>
             {/* Usa el componente Link para redirigir al usuario al Home */}
+            
             <Link to="/" className="volver-button">Volver al Inicio</Link>
+            <Lottie animationData={space1} loop={true} style={{ height: 200, width: 200 }}/>
+            
         </div>
     );
 };
