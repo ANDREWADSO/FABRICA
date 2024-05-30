@@ -5,8 +5,11 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+    const [lastname, setLastname] = useState ('');
     const [role, setRole] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState ('');
     const [message, setMessage] = useState('');
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,16 +17,18 @@ export const Register = (props) => {
         console.log("Datos enviados:", { name, email, password, role });
 
         try {
-            const response = await fetch('https://backend-final1.onrender.com/api-auth/register/', {
+            const response = await fetch('https://nodebackend-vv0e.onrender.com/api/v1/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     name: name,
+                    lastname: lastname,
                     email: email,
                     password: password,
-                    role: role
+                    role: role,
+                    confirmPassword: confirmPassword,
                 }),
             });
 
@@ -63,6 +68,16 @@ export const Register = (props) => {
                     placeholder="Nombre Completo" 
                     required
                 />
+                <label htmlFor="lastname">Apellido</label>
+                <input 
+                    value={lastname} 
+                    onChange={(e) => setLastname(e.target.value)} 
+                    type="text" 
+                    placeholder="Ingresa tu apellido" 
+                    id="lastname" 
+                    name="lastname" 
+                    required
+                />
                 <label htmlFor="email">Email</label>
                 <input 
                     value={email} 
@@ -83,6 +98,16 @@ export const Register = (props) => {
                     name="password" 
                     required
                 />
+                {/* <label htmlFor="role">Confirmar Contraseña</label> */}
+                <input 
+                    value={confirmPassword} 
+                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                    type="password" 
+                    placeholder="Confirma tu contraseña" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    required
+                />
                 <label htmlFor="role">Rol</label>
                 <input 
                     value={role} 
@@ -93,7 +118,8 @@ export const Register = (props) => {
                     name="role" 
                     required
                 />
-                <button type="submit">Registrar</button>
+
+            <button type="submit">Registrar</button>
             </form>
             <p>{message}</p>
             <button className="link-btn" onClick={() => props.onFormSwitch('login')}>¿Ya tienes una cuenta? Ingresa aquí.</button>

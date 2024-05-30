@@ -28,7 +28,7 @@ export const Login = (props) => {
         setMessage('¡Inicio de sesión con Google exitoso!');
 
         try {
-            const apiResponse = await fetch('https://backend-final1.onrender.com/api-auth/login/', {
+            const apiResponse = await fetch('https://nodebackend-vv0e.onrender.com/api/v1/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
