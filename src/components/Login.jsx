@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import { gapi } from "gapi-script";
 import GoogleLogin from "react-google-login";
-import space1 from '../assets/img/space1.json';
+import space2 from '../assets/img/space2.json';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 export const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -89,39 +90,53 @@ export const Login = (props) => {
 
     return (
         <div className="auth-form-container">
-            <h2>Login</h2>
+            <h2>Inicio</h2>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
-                <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    type="email"
-                    placeholder="youremail@gmail.com"
-                    id="email"
-                    name="email"
-                    required
-                />
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <i className="fa-solid fa-user-astronaut" style={{ marginRight: '10px' }}></i>
+                    <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder="youremail@gmail.com"
+                        id="email"
+                        name="email"
+                        required
+                    />
+                </div>
+
                 <label htmlFor="password">Contraseña</label>
+                <div style={{display: 'flex', alignItems: 'center'}}>
+                <i class="fa-solid fa-lock" style={{marginRight: '10px'}}></i>
                 <input
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
-                    placeholder="********"
+                    placeholder="Ingresa tu contraseña"
                     id="password"
                     name="password"
                     required
                 />
-                <button type="submit">Ingresar</button>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <i className="fa-solid fa-arrow-right-to-bracket" style={{ marginRight: '10px' }}></i>
+                <button type="submit" style={{ flex: '1', minWidth: '100px' }}>Ingresar</button>
+                </div>
+
             </form>
             <p>{message}</p>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+            <i class="fa-solid fa-id-card" style={{marginRight:'10px'}}></i>
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>¿No tienes una cuenta? Regístrate aquí.</button>
+            </div>
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30vh' }}>
-                <Lottie animationData={space1} loop={true} style={{ height: 200, width: 200 }} />
+                <Lottie animationData={space2} loop={true} style={{ height: 200, width: 200 }} />
             </div>
 
             <div className='center'>
-                <h3>O ingresa con tu cuenta de Google</h3>
+                <h3>Ingresa con tu cuenta de Google</h3>
                 <div className='btn'>
                     <GoogleLogin
                         clientId={clientId}
@@ -138,7 +153,11 @@ export const Login = (props) => {
                 )}
             </div>
             <div>
+                <i class="fa-solid fa-rotate-left"></i>
+                <br />
                 <Link to="/" className="volver-button">Volver al Inicio</Link>
+               
+                
             </div>
         </div>
     );
