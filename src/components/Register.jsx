@@ -15,6 +15,7 @@ export const Register = (props) => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [message, setMessage] = useState('');
     const [user, setUser] = useState({});
+    const [error, setError] = useState(''); 
 
     const clientId = "820254293735-tbvel3tqdnoon17chfdne4j5vr1act6q.apps.googleusercontent.com";
 
@@ -68,10 +69,25 @@ export const Register = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         console.log("Datos enviados:", { name, email, password, role });
-
+    
         try {
+            // Verificar si el correo electrónico ya está registrado
+            const checkEmailResponse = await fetch(`https://nodebackend-vv0e.onrender.com/api/v1/auth/check-email?email=${email}`);
+            const checkEmailData = await checkEmailResponse.json();
+    
+            if (!checkEmailResponse.ok) {
+                throw new Error(checkEmailData.message || 'Error al verificar el correo electrónico');
+            }
+    
+            if (!checkEmailData.available) {
+                // Si el correo electrónico ya está registrado, mostrar un mensaje de error y salir de la función
+                setError('Este correo electrónico ya ha sido registrado. Por favor, utiliza otro.');
+                return;
+            }
+    
+            // Si el correo electrónico no está registrado, continuar con el proceso de registro
             const response = await fetch('https://nodebackend-vv0e.onrender.com/api/v1/auth/register', {
                 method: 'POST',
                 headers: {
@@ -86,17 +102,17 @@ export const Register = (props) => {
                     confirmPassword: confirmPassword,
                 }),
             });
-
+    
             console.log("Estado de la respuesta:", response.status);
             console.log("Encabezados de la respuesta:", response.headers);
-
+    
             if (response.headers.get('content-type')?.includes('application/json')) {
                 const data = await response.json();
                 if (!response.ok) {
                     console.log("Datos de error:", data);
                     throw new Error(data.message || 'Error en el registro');
                 }
-
+    
                 console.log('Registro exitoso', data);
                 setMessage('¡Registro exitoso! Ahora puedes iniciar sesión.');
             } else {
@@ -106,9 +122,11 @@ export const Register = (props) => {
             }
         } catch (error) {
             console.error('Error:', error);
-            setMessage(error.message || 'Error en el registro. Por favor, inténtelo de nuevo.');
+            setMessage('');
+            setError(error.message || 'Error en el registro. Por favor, inténtelo de nuevo.');
         }
     };
+    
 
     return (
         <div className="auth-form-container">

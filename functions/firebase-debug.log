@@ -1,0 +1,90 @@
+[debug] [2024-06-03T21:01:36.944Z] ----------------------------------------------------------------------
+[debug] [2024-06-03T21:01:36.945Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ANDRES\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions --debug
+[debug] [2024-06-03T21:01:36.946Z] CLI Version:   13.10.2
+[debug] [2024-06-03T21:01:36.946Z] Platform:      win32
+[debug] [2024-06-03T21:01:36.946Z] Node Version:  v18.17.1
+[debug] [2024-06-03T21:01:36.947Z] Time:          Mon Jun 03 2024 16:01:36 GMT-0500 (hora estándar de Colombia)
+[debug] [2024-06-03T21:01:36.947Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-03T21:01:37.000Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-03T21:01:37.002Z] > authorizing via signed-in user (financiero.amartinez@gmail.com)
+[debug] [2024-06-03T21:01:37.002Z] [iam] checking project aprendix-b1ca6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-06-03T21:01:37.004Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions [none]
+[debug] [2024-06-03T21:01:37.005Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:01:37.006Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-06-03T21:01:37.646Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions 200
+[debug] [2024-06-03T21:01:37.647Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-06-03T21:01:37.647Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-06-03T21:01:37.647Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-06-03T21:01:38.390Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-06-03T21:01:38.390Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'aprendix-b1ca6'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[error] 
+[error] Error: functions predeploy error: Command terminated with non-zero exit code 1
+[debug] [2024-06-03T21:04:06.766Z] ----------------------------------------------------------------------
+[debug] [2024-06-03T21:04:06.767Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ANDRES\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions --debug
+[debug] [2024-06-03T21:04:06.768Z] CLI Version:   13.10.2
+[debug] [2024-06-03T21:04:06.768Z] Platform:      win32
+[debug] [2024-06-03T21:04:06.768Z] Node Version:  v18.17.1
+[debug] [2024-06-03T21:04:06.769Z] Time:          Mon Jun 03 2024 16:04:06 GMT-0500 (hora estándar de Colombia)
+[debug] [2024-06-03T21:04:06.769Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-03T21:04:06.837Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-03T21:04:06.838Z] > authorizing via signed-in user (financiero.amartinez@gmail.com)
+[debug] [2024-06-03T21:04:06.839Z] [iam] checking project aprendix-b1ca6 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-06-03T21:04:06.841Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions [none]
+[debug] [2024-06-03T21:04:06.841Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:06.842Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-06-03T21:04:07.464Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions 200
+[debug] [2024-06-03T21:04:07.465Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aprendix-b1ca6:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-06-03T21:04:07.465Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-06-03T21:04:07.466Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-06-03T21:04:07.998Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-06-03T21:04:07.999Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/aprendix-b1ca6/serviceAccounts/aprendix-b1ca6@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'aprendix-b1ca6'...
+[info] 
+[info] i  deploying functions 
+[info] +  functions: Finished running predeploy script. 
+[debug] [2024-06-03T21:04:08.002Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aprendix-b1ca6 [none]
+[debug] [2024-06-03T21:04:08.406Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aprendix-b1ca6 200
+[debug] [2024-06-03T21:04:08.406Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aprendix-b1ca6 {"projectId":"aprendix-b1ca6","projectNumber":"885564326569","displayName":"Aprendix","name":"projects/aprendix-b1ca6","resources":{"hostingSite":"aprendix-b1ca6"},"state":"ACTIVE","etag":"1_3e096228-1b82-4e24-8d45-ca836ea19dd4"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-06-03T21:04:08.409Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-06-03T21:04:08.409Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:08.410Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-06-03T21:04:08.410Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:08.411Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com [none]
+[debug] [2024-06-03T21:04:08.411Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:08.412Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com [none]
+[debug] [2024-06-03T21:04:08.413Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:09.270Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/runtimeconfig.googleapis.com 200
+[debug] [2024-06-03T21:04:09.271Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-06-03T21:04:09.274Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com 200
+[debug] [2024-06-03T21:04:09.274Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-06-03T21:04:09.275Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-06-03T21:04:09.275Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:09.347Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com 200
+[debug] [2024-06-03T21:04:09.348Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-06-03T21:04:09.348Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-06-03T21:04:09.350Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/aprendix-b1ca6
+[debug] [2024-06-03T21:04:09.386Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudfunctions.googleapis.com 200
+[debug] [2024-06-03T21:04:09.386Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-06-03T21:04:10.052Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com:enable 400
+[debug] [2024-06-03T21:04:10.052Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-06-03T21:04:10.185Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com:enable 400
+[debug] [2024-06-03T21:04:10.185Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/aprendix-b1ca6/services/cloudbuild.googleapis.com:enable [omitted]
+[error] 
+[error] Error: Your project aprendix-b1ca6 must be on the Blaze (pay-as-you-go) plan to complete this command. Required API artifactregistry.googleapis.com can't be enabled until the upgrade is complete. To upgrade, visit the following URL:
+
+https://console.firebase.google.com/project/aprendix-b1ca6/usage/details
