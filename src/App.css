@@ -869,4 +869,74 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+/************ Efecto Carrusel de Skilss ************/ 
 
+.item {
+  position: relative;
+  text-align: center;
+}
+
+.item h5 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover h5 {
+  opacity: 1;
+}
+
+
+/************ Titulos Carrusel de Skilss ************/ 
+
+
+.skill-bx {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.skill-bx .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.skill-bx .item h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+
+.skill-bx .item p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.owl-carousel .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-carousel .item h3, .owl-carousel .item p {
+  margin: 10px 0;
+}
